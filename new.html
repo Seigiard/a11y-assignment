@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>White unisex t-shirt - Susparsa</title>
+		<link rel="icon" href="icon.svg" type="image/svg+xml">
+		<link href="styles.new.css" rel="stylesheet">
+	</head>
+	<body>
+		<header class="header">
+  		<nav class="container" aria-label="Primary navigation">
+  			<ul class="menu">
+  				<li>
+  					<a href="#">Women</a>
+  				</li>
+  				<li>
+  					<a href="#">Men</a>
+  				</li>
+  				<li>
+  					<a href="#">Kids</a>
+  				</li>
+  				<li>
+  					<a href="#">Company</a>
+  				</li>
+  				<li>
+  				  <a href="/" aria-label="Susparsa main page" >
+  						<img class="menu__logo-picture" src="images/logo.svg" alt="Susparsa Logotype">
+  					</a>
+  				</li>
+  				<li>
+  					<a href="#">Account</a>
+  				</li>
+  				<li>
+  					<a href="#">Search</a>
+  				</li>
+  				<li>
+  					<a href="#">Cart (0)</a>
+  				</li>
+  			</ul>
+  		</nav>
+		</header>
+
+		<main class="container page-content">
+  		<nav aria-label="Breadcrumbs">
+   			<ul class="breadcrumbs">
+  				<li>
+   					<a href="#">Home</a>
+  				</li>
+  				<li>
+   					<a href="#">Women</a>
+  				</li>
+  				<li>
+   					<span>White unisex t-shirt</span>
+  				</li>
+   			</ul>
+      </nav>
+
+			<h1 id="productName">White unisex t-shirt</h1>
+
+			<p><span>Price:</span> EUR 40</p>
+			<p>Tax included</p>
+
+			<form popovertarget="added-to-card-modal" onsubmit="handleFromSubmitAndShowPopover(event)" aria-label="Order form" action="/make-order">
+  			<label for="product-size">Size</label>
+  			<select id="product-size" name="product_size">
+  				<option value="xs">XS</option>
+  				<option value="s">S</option>
+  				<option value="m">M</option>
+  				<option value="l">L</option>
+  				<option value="xl">XL</option>
+  			</select>
+
+				<button type="button" popovertarget="size-guide-modal" aria-label="Open Size Guide modal">Size Guide</button>
+				<div popover id="size-guide-modal">
+						<h3 class="heading-2">Size guide</h3>
+						<p>Some description about the sizes</p>
+						<table class="size-guide__table">
+							<tr>
+								<td>EU</td>
+								<td>US</td>
+							</tr>
+							<tr>
+								<td>36</td>
+								<td>8</td>
+							</tr>
+							<tr>
+								<td>38</td>
+								<td>9</td>
+							</tr>
+							<tr>
+								<td>40</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>42</td>
+								<td>11</td>
+							</tr>
+						</table>
+				</div>
+
+				<fieldset role="radiogroup" aria-labelledby="color-select-title">
+					<legend id="color-select-title">Color</legend>
+					<label>
+						<input type="radio" name="product_color" value="white" checked>
+						White
+					</label>
+					<label>
+						<input type="radio" name="product_color" value="black">
+						Black
+					</label>
+					<label>
+						<input type="radio" name="product_color" data-name-display="Gray" value="gray">
+						Gray
+					</label>
+					<label>
+						<input type="radio" name="product_color" data-name-display="Purple latte" value="purple">
+						Purple
+					</label>
+					<label>
+						<input type="radio" name="product_color" data-name-display="Color 1" value="color1" disabled>
+						Color 1
+					</label>
+					<label>
+						<input type="radio" name="product_color" data-name-display="Color 2" value="color2" disabled>
+						Color 2
+					</label>
+				</fieldset>
+
+				<label for="productQuantity">Quantity</label>
+				<div class="input-quantity">
+					<button type="button" class="input-quantity__btn" data-action="decrease" aria-label="Decrease quantity by 1">&minus;</button>
+					<input type="number" class="input-quantity__field" id="productQuantity" name="product_quantity" value="1">
+					<button type="button" class="input-quantity__btn" data-action="increase" aria-label="Increase quantity by 1">&plus;</button>
+				</div>
+
+				<button type="submit">Add to cart</button>
+				<button type="button" onclick="alert('Buy it now!')">Buy it now</button>
+			</form>
+
+			<div popover id="added-to-card-modal">
+			 <h2>Added to card</h2>
+			</div>
+
+			<section aria-label="Prodcut description">
+				<p>A unisex basic garment with a loose fit. Light and comfortable to your skin.</p>
+				<p>Certification of cotton - GOTS</p>
+			</section>
+
+			<img src="images/photo1.jpg" srcset="images/photo1_x2.jpg 2x" alt="">
+
+			<section class="accordion" aria-label="Additional product info">
+			  <details>
+					<summary>Sizing & Fit</summary>
+					<p>Olga is 175cm, she is wearing a size S.</p>
+				</details>
+        <details>
+					<summary>Composition & Care</summary>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				</details>
+        <details>
+					<summary>Delivery & Returns</summary>
+				  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+				</details>
+			</section>
+		</main>
+
+		<section aria-labelledby="header-product-video">
+			<h2 id="header-product-video">Video about the product</h2>
+			<div role="application" aria-labelledby="header-product-video">
+				<iframe width="100%" height="500" src="https://www.youtube.com/embed/9XDvpm7sLVg?si=clINFdoVQuk20KPS" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</section>
+
+		<aside aria-labelledby="aside-label">
+			<h2 id="aside-label">You may also like</h2>
+
+			<div role="list">
+				<div role="listitem">
+					<img src="images/photo2.jpg" srcset="images/photo2_x2.jpg 2x" alt="">
+					<h3><a href="#">Product name</a></h3>
+					<ul aria-label="Avaliable colors">
+						<li>
+							<span style="background-color: orange;">
+							  Orange
+							</span>
+						</li>
+						<li>
+							<span style="background-color: pink;">
+							  Pink
+							</span>
+						</li>
+						<li>
+							<span style="background-color: blue;">
+							  Blue
+							</span>
+						</li>
+						<li aria-label="green">
+							<span style="background-color: green;">
+							  Green
+							</span>
+						</li>
+					</ul>
+					<p><span>Price:</span> EUR 40</p>
+				</div>
+				<div role="listitem">
+					<img src="images/photo3.jpg" srcset="images/photo3_x2.jpg 2x" alt="">
+					<h3><a href="#">Very long product name for testing purposes</a></h3>
+					<ul aria-label="Avaliable colors">
+						<li>
+							<span style="background-color: red">
+							  Red
+							</span>
+						</li>
+						<li>
+							<span style="background-color: green;">
+							  Green
+							</span>
+						</li>
+						<li>
+							<span style="background-color: blue;">
+							  Blue
+							</span>
+						</li>
+					</ul>
+					<p><span>Price:</span> EUR 40</p>
+				</div>
+				<div role="listitem">
+					<ul class="product-tags products-grid__item-product-tags">
+						<li class="product-tags__item">Sold out</li>
+					</ul>
+					<img src="images/photo4.jpg" srcset="images/photo4_x2.jpg 2x" alt="">
+					<h3><a href="#">Product name</a></h3>
+					<ul aria-label="Avaliable colors">
+						<li>
+							<span style="background-color: orange;">
+							  Orange
+							</span>
+						</li>
+						<li>
+							<span style="background-color: pink;">
+							  Pink
+							</span>
+						</li>
+						<li>
+							<span style="background-color: blue;">
+							  Blue
+							</span>
+						</li>
+						<li aria-label="green">
+							<span style="background-color: green;">
+							  Green
+							</span>
+						</li>
+					</ul>
+					<p><span>Price:</span> EUR 40</p>
+				</div>
+			</div>
+		</aside>
+
+		<footer aria-labelledby="footer-title">
+			<h2 id="footer-title">Footer</h2>
+			<section>
+				<h3>About</h3>
+				<p>Susparsa Store</p>
+				<p>Geneva, Switzerland</p>
+				<ul class="social" aria-label="Our social accounts">
+					<li>
+						<a href="#" target="_blank" aria-label="Facebook, opens in new window">
+							<svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg" alt="" aria-hidden>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.02694 9.9817H6.42882V19.5H2.49245V9.9817H0.6203V6.63659H2.49245V4.47193C2.49245 2.92396 3.22776 0.5 6.46386 0.5L9.37967 0.512199V3.7592H7.26406C6.91704 3.7592 6.42908 3.93258 6.42908 4.671V6.63971H9.37084L9.02694 9.9817Z" fill="#5E626B"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" aria-label="Instagram, opens in new window">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" alt="" aria-hidden>
+								<path d="M14.7071 0.5C17.3502 0.5 19.5 2.65013 19.5 5.29293V14.7071C19.5 17.3502 17.3502 19.5 14.7071 19.5H5.29293C2.65013 19.5 0.5 17.3502 0.5 14.7071V5.29293C0.5 2.65013 2.65013 0.5 5.29293 0.5H14.7071ZM14.7071 2.56779H5.29293C3.7903 2.56779 2.56779 3.7903 2.56779 5.29293V14.7071C2.56779 16.2097 3.7903 17.4326 5.29293 17.4326H14.7071C16.2097 17.4326 17.4326 16.21 17.4326 14.7071V5.29293C17.4326 3.7903 16.21 2.56779 14.7071 2.56779ZM10 5.10678C12.6984 5.10678 14.8936 7.30195 14.8936 10C14.8936 12.698 12.698 14.8936 10 14.8936C7.30195 14.8936 5.10678 12.6984 5.10678 10C5.10678 7.30195 7.30195 5.10678 10 5.10678ZM10 7.17456C8.44247 7.17456 7.17421 8.44212 7.17421 9.99965C7.17421 11.5579 8.44247 12.8258 10 12.8258C11.5582 12.8258 12.8254 11.5579 12.8254 9.99965C12.8254 8.44247 11.5579 7.17456 10 7.17456ZM15.0509 3.80297C15.6892 3.80297 16.2086 4.32238 16.2086 4.96073C16.2086 5.59909 15.6892 6.1185 15.0509 6.1185C14.4122 6.1185 13.8928 5.59909 13.8928 4.96073C13.8928 4.32238 14.4122 3.80297 15.0509 3.80297Z" fill="#5E626B"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Company</h3>
+				<nav aria-label="Footer navigation">
+					<ul>
+						<li>
+							<a href="#">Woman</a>
+						</li>
+						<li>
+							<a href="#">Men</a>
+						</li>
+						<li>
+							<a href="#">Kids</a>
+						</li>
+						<li>
+							<a href="#">About Us</a>
+						</li>
+						<li>
+							<a href="#">Our Materials</a>
+						</li>
+					</ul>
+				</nav>
+			</section>
+
+			<section>
+				<h3>Useful links</h3>
+				<div>
+					<ul>
+						<li>
+							<a href="#">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="#">Shipping Policy</a>
+						</li>
+						<li>
+							<a href="#">Return & Refund Policy</a>
+						</li>
+						<li>
+							<a href="#">Terms of Service</a>
+						</li>
+						<li>
+							<a href="#">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+			<form popovertarget="subscribed-modal" onSubmit="handleFromSubmitAndShowPopover(event)" aria-labelledby="subscription-form-title" action="/subscribe-form">
+			 <h3 id="subscription-form-title">Subscribe</h3>
+				<label>
+  				Email:
+  				<input type="email" name="email" id="email" placeholder="Email" required>
+				</label>
+
+				<label>
+					<input class="checkbox" type="checkbox" name="agree" id="agree" required> I agree to give you all my data
+				</label>
+
+				<button type='submit'>Subscribe</button>
+			</form>
+			<div popover id="subscribed-modal">
+			  <h2>Succesfully subscribed!</h2>
+			</div>
+
+			<p><small>© Susparsa 2021</small></p>
+		</footer>
+		<script src="scripts.new.js"></script>
+	</body>
+</html>
