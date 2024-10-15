@@ -165,95 +165,101 @@
 			</section>
 		</main>
 
-		<section hidden class="container"git  aria-labelledby="header-product-video">
-			<h2 id="header-product-video">Video about the product</h2>
+		<section class="container product-video" aria-labelledby="header-product-video">
+			<h2 class="heading-2 product-video__header" id="header-product-video">Video about the product</h2>
 			<div role="application" aria-labelledby="header-product-video">
 				<iframe width="100%" height="500" src="https://www.youtube.com/embed/9XDvpm7sLVg?si=clINFdoVQuk20KPS" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</div>
 		</section>
 
-		<aside hidden class="container" aria-labelledby="aside-label">
-			<h2 id="aside-label">You may also like</h2>
+		<aside class="container ymal" aria-labelledby="aside-label">
+			<h2 id="aside-label" class="heading-2 ymal__header">You may also like</h2>
 
-			<div role="list">
-				<div role="listitem">
-					<img src="images/photo2.jpg" srcset="images/photo2_x2.jpg 2x" alt="">
-					<h3><a href="#">Product name</a></h3>
-					<ul aria-label="Avaliable colors">
-						<li>
-							<span style="background-color: orange;">
+			<div class="ymal__list" role="list">
+				<div class="ymal__listitem" role="listitem">
+  				<div class="ymal__imgWrapper">
+  					<img class="ymal__img" src="images/photo2.jpg" srcset="images/photo2_x2.jpg 2x" alt="">
+  				</div>
+					<h3 class="ymal__subheader"><a href="#">Product name</a></h3>
+					<ul class="ymal__colors" aria-label="Avaliable colors">
+						<li class="ymal__color" style="background-color: orange;">
+							<span class="sr-only">
 							  Orange
 							</span>
 						</li>
-						<li>
-							<span style="background-color: pink;">
+						<li class="ymal__color" style="background-color: pink;">
+							<span class="sr-only">
 							  Pink
 							</span>
 						</li>
-						<li>
-							<span style="background-color: blue;">
+						<li class="ymal__color" style="background-color: blue;">
+							<span class="sr-only">
 							  Blue
 							</span>
 						</li>
-						<li aria-label="green">
-							<span style="background-color: green;">
+						<li class="ymal__color" style="background-color: green;">
+							<span class="sr-only">
 							  Green
 							</span>
 						</li>
 					</ul>
-					<p><span>Price:</span> EUR 40</p>
+					<p><span class="sr-only">Price:</span> EUR 40</p>
 				</div>
-				<div role="listitem">
-					<img src="images/photo3.jpg" srcset="images/photo3_x2.jpg 2x" alt="">
-					<h3><a href="#">Very long product name for testing purposes</a></h3>
-					<ul aria-label="Avaliable colors">
-						<li>
-							<span style="background-color: red">
+				<div class="ymal__listitem" role="listitem">
+  				<div class="ymal__imgWrapper">
+  					<img class="ymal__img" src="images/photo3.jpg" srcset="images/photo3_x2.jpg 2x" alt="">
+  				</div>
+					<h3 class="ymal__subheader"><a href="#">Very long product name for testing purposes</a></h3>
+					<ul class="ymal__colors" aria-label="Avaliable colors">
+						<li class="ymal__color" style="background-color: red">
+							<span class="sr-only">
 							  Red
 							</span>
 						</li>
-						<li>
-							<span style="background-color: green;">
+						<li class="ymal__color" style="background-color: green;">
+							<span class="sr-only">
 							  Green
 							</span>
 						</li>
-						<li>
-							<span style="background-color: blue;">
+						<li class="ymal__color" style="background-color: blue;">
+							<span class="sr-only">
 							  Blue
 							</span>
 						</li>
 					</ul>
-					<p><span>Price:</span> EUR 40</p>
+					<p><span class="sr-only">Price:</span> EUR 40</p>
 				</div>
-				<div role="listitem">
-					<ul class="product-tags products-grid__item-product-tags">
-						<li class="product-tags__item">Sold out</li>
-					</ul>
-					<img src="images/photo4.jpg" srcset="images/photo4_x2.jpg 2x" alt="">
-					<h3><a href="#">Product name</a></h3>
-					<ul aria-label="Avaliable colors">
-						<li>
-							<span style="background-color: orange;">
+				<div class="ymal__listitem" role="listitem">
+					<div class="ymal__imgWrapper">
+					  <img class="ymal__img" src="images/photo4.jpg" srcset="images/photo4_x2.jpg 2x" alt="">
+					</div>
+					<h3 class="ymal__subheader"><a href="#">Product name</a></h3>
+					<div class="ymal__tag">
+							<span class="sr-only">Product status:</span> Sold out
+						</div>
+					<ul class="ymal__colors" aria-label="Avaliable colors">
+						<li class="ymal__color" style="background-color: orange;">
+							<span class="sr-only">
 							  Orange
 							</span>
 						</li>
-						<li>
-							<span style="background-color: pink;">
+						<li class="ymal__color" style="background-color: pink;">
+							<span class="sr-only">
 							  Pink
 							</span>
 						</li>
-						<li>
-							<span style="background-color: blue;">
+						<li class="ymal__color" style="background-color: blue;">
+							<span class="sr-only">
 							  Blue
 							</span>
 						</li>
-						<li aria-label="green">
-							<span style="background-color: green;">
+						<li class="ymal__color" style="background-color: green;">
+							<span class="sr-only">
 							  Green
 							</span>
 						</li>
 					</ul>
-					<p><span>Price:</span> EUR 40</p>
+					<p><span class="sr-only">Price:</span> EUR 40</p>
 				</div>
 			</div>
 		</aside>
