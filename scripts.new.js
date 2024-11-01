@@ -31,3 +31,10 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 })
+
+window.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById('menu_toggle');
+  menuToggle.getElementsByTagName('input')[0].addEventListener('change', (e => {
+    menuToggle.setAttribute('aria-label', e.target.checked ? 'Collapse menu' : 'Expand menu')
+  }))
+})

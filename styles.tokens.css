@@ -1,0 +1,55 @@
+:root {
+  --grayA1: #00000003;
+  --grayA2: #00000006;
+  --grayA3: #0000000f;
+  --grayA4: #00000017;
+  --grayA5: #0000001f;
+  --grayA6: #00000026;
+  --grayA7: #00000031;
+  --grayA8: #00000044;
+  --grayA9: #00000072;
+  --grayA10: #0000007c;
+  --grayA11: #0000009b;
+  --grayA12: #000000df;
+
+  --violetA1: #5500aa03;
+  --violetA2: #4900ff07;
+  --violetA3: #4400ee0f;
+  --violetA4: #4300ff1b;
+  --violetA5: #3600ff26;
+  --violetA6: #3100fb35;
+  --violetA7: #2d01dd4a;
+  --violetA8: #2b00d066;
+  --violetA9: #2400b7a9;
+  --violetA10: #2300abb2;
+  --violetA11: #1f0099af;
+  --violetA12: #0b0043d9;
+
+  --gray-7: #1a1f29;
+  --gray-6: #282a2e;
+  --gray-5: #44454e;
+  --gray-4: #666270;
+  --gray-3: #8c7f91;
+  --gray-2: #b69db2;
+  --gray-1: #e3bccf;
+
+  --blue-6: rgba(23,28,143);
+  --blue-5: #004fbd;
+  --blue-4: #0078d5;
+  --blue-3: #009dd8;
+  --blue-2: #00c1cd;
+  --blue-1: rgba(23,28,143,0.05);
+
+  --text-color-primary: var(--gray-6);
+  --text-color-light: var(--gray-5);
+  --border-color-primary: var(--gray-7);
+  --border-color-light: var(--gray-2);
+  --link-color-primary: var(--blue-6);
+  --brand-blue: var(--blue-6);
+
+  --fz-sm: 0.875rem;
+  --fz-md 1rem;
+  --fz-lg: 1.125rem;
+  --fz-xl: 1.25rem;
+  --fz-2xl: 1.375rem;
+}

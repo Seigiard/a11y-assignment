@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Avenir Next Rounded Std";
+  src: url("fonts/AvenirNextRoundedStd-Reg.eot");
+  src: local("Avenir Next Rounded Std Regular"),
+    local("AvenirNextRoundedStd-Reg"),
+    url("fonts/AvenirNextRoundedStd-Reg.eot?#iefix") format("embedded-opentype"),
+    url("fonts/AvenirNextRoundedStd-Reg.woff") format("woff"),
+    url("fonts/AvenirNextRoundedStd-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Rounded Std";
+  src: url("fonts/AvenirNextRoundedStd-Demi.eot");
+  src: local("Avenir Next Rounded Std Demi"), local("AvenirNextRoundedStd-Demi"),
+    url("fonts/AvenirNextRoundedStd-Demi.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/AvenirNextRoundedStd-Demi.woff") format("woff"),
+    url("fonts/AvenirNextRoundedStd-Demi.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@layer reset {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+}
+
+@layer default {
+  a {
+    text-decoration: none;
+    outline: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:focus {
+    outline: 1px dashed;
+    outline-offset: 2px;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    background-color: #fff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+
+  input,
+  textarea,
+  button {
+    font-family: "Avenir Next Rounded Std", sans-serif;
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+  button:focus {
+    outline: 1px dashed;
+    outline-offset: 2px;
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  fieldset {
+    border: none;
+  }
+
+  fieldset legend {
+    border: none;
+  }
+
+  body {
+    font-family: "Avenir Next Rounded Std", sans-serif;
+    color: var(--text-color-primary);
+  }
+}

@@ -9,41 +9,52 @@
 	</head>
 	<body>
 		<header class="header">
+      <a class="skip-link" href="#main">
+        Skip to main content
+      </a>
   		<nav class="container" aria-label="Primary navigation">
-  			<ul class="menu">
-  				<li>
-  					<a href="#">Women</a>
+  			<ul class="menu" role="menu">
+   				<li role="none" class="menu_logo menu_logo__mobile">
+            <label class="menu_toggle" id="menu_toggle" aria-label="Expand menu">
+              <input type="checkbox" class="sr-only" /> ☰
+            </label>
+   				  <a role="menuitem" href="/" aria-label="Susparsa main page" >
+   						<img src="images/logo.svg" alt="Susparsa Logotype">
+   					</a>
+   				</li>
+  				<li role="none">
+  					<a role="menuitem" href="#">Women</a>
   				</li>
-  				<li>
-  					<a href="#">Men</a>
+  				<li role="none">
+  					<a role="menuitem" href="#">Men</a>
   				</li>
-  				<li>
-  					<a href="#">Kids</a>
+  				<li role="none">
+  					<a role="menuitem" href="#">Kids</a>
   				</li>
-  				<li>
-  					<a href="#">Company</a>
+  				<li role="none">
+  					<a role="menuitem" href="#">Company</a>
   				</li>
-  				<li>
-  				  <a href="/" aria-label="Susparsa main page" >
-  						<img class="menu__logo-picture" src="images/logo.svg" alt="Susparsa Logotype">
-  					</a>
+  				<li role="none" class="menu_logo menu_logo__desktop">
+  				  <a role="menuitem" href="/" aria-label="Susparsa main page" >
+  						<img src="images/logo.svg" alt="Susparsa Logotype">
+   					</a>
   				</li>
-  				<li>
-  					<a href="#">Account</a>
+  				<li role="none">
+  					<a role="menuitem" href="#">Account</a>
   				</li>
-  				<li>
-  					<a href="#">Search</a>
+  				<li role="none">
+  					<a role="menuitem" href="#">Search</a>
   				</li>
-  				<li>
-  					<a href="#">Cart (0)</a>
+  				<li role="none">
+  					<a role="menuitem" href="#">Cart (0)</a>
   				</li>
   			</ul>
-  		</nav>
+      </nav>
 		</header>
 
-		<main hidden class="container page-content">
-  		<nav aria-label="Breadcrumbs">
-   			<ul class="breadcrumbs">
+		<section class="container">
+  		<nav aria-label="Breadcrumb">
+   			<ol class="breadcrumbs">
   				<li>
    					<a href="#">Home</a>
   				</li>
@@ -53,116 +64,125 @@
   				<li>
    					<span>White unisex t-shirt</span>
   				</li>
-   			</ul>
+   			</>
       </nav>
+		</section>
 
-			<h1 id="productName">White unisex t-shirt</h1>
+		<main id="main" class="container page-content">
+  		<div role="presentation" class="page-content__image">
+  		  <img src="images/photo1.jpg" srcset="images/photo1_x2.jpg 2x" alt="">
+      </div>
+      <div role="presentation" class="page-content__content product">
+        <h1 id="productName" class="product__title">White unisex t-shirt</h1>
 
-			<p><span>Price:</span> EUR 40</p>
-			<p>Tax included</p>
+  			<p class="product__price"><span class="sr-only">Price:</span> EUR 40</p>
+  			<p class="product__taxes">Tax included</p>
 
-			<form popovertarget="added-to-card-modal" onsubmit="handleFromSubmitAndShowPopover(event)" aria-label="Order form" action="/make-order">
-  			<label for="product-size">Size</label>
-  			<select id="product-size" name="product_size">
-  				<option value="xs">XS</option>
-  				<option value="s">S</option>
-  				<option value="m">M</option>
-  				<option value="l">L</option>
-  				<option value="xl">XL</option>
-  			</select>
+  			<form popovertarget="added-to-card-modal" onsubmit="handleFromSubmitAndShowPopover(event)" aria-label="Order form" action="/make-order">
+     			<label for="product-size">Size</label>
+     			<select id="product-size" name="product_size">
+      				<option value="xs">XS</option>
+      				<option value="s">S</option>
+      				<option value="m">M</option>
+      				<option value="l">L</option>
+      				<option value="xl">XL</option>
+     			</select>
 
-				<button type="button" popovertarget="size-guide-modal" aria-label="Open Size Guide modal">Size Guide</button>
-				<div popover id="size-guide-modal">
-						<h3 class="heading-2">Size guide</h3>
-						<p>Some description about the sizes</p>
-						<table class="size-guide__table">
-							<tr>
-								<td>EU</td>
-								<td>US</td>
-							</tr>
-							<tr>
-								<td>36</td>
-								<td>8</td>
-							</tr>
-							<tr>
-								<td>38</td>
-								<td>9</td>
-							</tr>
-							<tr>
-								<td>40</td>
-								<td>10</td>
-							</tr>
-							<tr>
-								<td>42</td>
-								<td>11</td>
-							</tr>
-						</table>
-				</div>
+  				<button type="button" popovertarget="size-guide-modal" aria-label="Open Size Guide modal">Size Guide</button>
 
-				<fieldset role="radiogroup" aria-labelledby="color-select-title">
-					<legend id="color-select-title">Color</legend>
-					<label>
-						<input type="radio" name="product_color" value="white" checked>
-						White
-					</label>
-					<label>
-						<input type="radio" name="product_color" value="black">
-						Black
-					</label>
-					<label>
-						<input type="radio" name="product_color" data-name-display="Gray" value="gray">
-						Gray
-					</label>
-					<label>
-						<input type="radio" name="product_color" data-name-display="Purple latte" value="purple">
-						Purple
-					</label>
-					<label>
-						<input type="radio" name="product_color" data-name-display="Color 1" value="color1" disabled>
-						Color 1
-					</label>
-					<label>
-						<input type="radio" name="product_color" data-name-display="Color 2" value="color2" disabled>
-						Color 2
-					</label>
-				</fieldset>
 
-				<label for="productQuantity">Quantity</label>
-				<div class="input-quantity">
-					<button type="button" class="input-quantity__btn" data-action="decrease" aria-label="Decrease quantity by 1">&minus;</button>
-					<input type="number" class="input-quantity__field" id="productQuantity" name="product_quantity" value="1">
-					<button type="button" class="input-quantity__btn" data-action="increase" aria-label="Increase quantity by 1">&plus;</button>
-				</div>
+  				<fieldset role="radiogroup" aria-labelledby="color-select-title">
+  					<legend id="color-select-title">Color</legend>
+  					<label>
+  						<input type="radio" name="product_color" value="white" checked>
+  						White
+  					</label>
+  					<label>
+  						<input type="radio" name="product_color" value="black">
+  						Black
+  					</label>
+  					<label>
+  						<input type="radio" name="product_color" data-name-display="Gray" value="gray">
+  						Gray
+  					</label>
+  					<label>
+  						<input type="radio" name="product_color" data-name-display="Purple latte" value="purple">
+  						Purple
+  					</label>
+  					<label>
+  						<input type="radio" name="product_color" data-name-display="Color 1" value="color1" disabled>
+  						Color 1
+  					</label>
+  					<label>
+  						<input type="radio" name="product_color" data-name-display="Color 2" value="color2" disabled>
+  						Color 2
+  					</label>
+  				</fieldset>
 
-				<button type="submit">Add to cart</button>
-				<button type="button" onclick="alert('Buy it now!')">Buy it now</button>
-			</form>
+  				<label for="productQuantity">Quantity</label>
+  				<fieldset class="input-quantity" aria-label="Quantity">
+  					<button type="button" class="input-quantity__btn" data-action="decrease" aria-label="Decrease quantity by 1">&minus;</button>
+  					<input type="number" class="input-quantity__field" id="productQuantity" name="product_quantity" value="1">
+  					<button type="button" class="input-quantity__btn" data-action="increase" aria-label="Increase quantity by 1">&plus;</button>
+  				</fieldset>
 
-			<div popover id="added-to-card-modal">
-			 <h2>Added to card</h2>
-			</div>
+  				<button type="submit">Add to cart</button>
+  				<button type="button" onclick="alert('Buy it now!')">Buy it now</button>
+  			</form>
 
-			<section aria-label="Prodcut description">
-				<p>A unisex basic garment with a loose fit. Light and comfortable to your skin.</p>
-				<p>Certification of cotton - GOTS</p>
-			</section>
+  			<div popover id="added-to-card-modal">
+  			 <h2>Added to card</h2>
+  			</div>
 
-			<img src="images/photo1.jpg" srcset="images/photo1_x2.jpg 2x" alt="">
+ 				<div popover id="size-guide-modal">
+ 						<h3 class="heading-2">Size guide</h3>
+ 						<p>Some description about the sizes</p>
+ 						<table class="size-guide__table" aria-label="Size guide table">
+ 							<tr>
+ 								<td>EU</td>
+ 								<td>US</td>
+ 							</tr>
+ 							<tr>
+ 								<td>36</td>
+ 								<td>8</td>
+ 							</tr>
+ 							<tr>
+ 								<td>38</td>
+ 								<td>9</td>
+ 							</tr>
+ 							<tr>
+ 								<td>40</td>
+ 								<td>10</td>
+ 							</tr>
+ 							<tr>
+ 								<td>42</td>
+ 								<td>11</td>
+ 							</tr>
+ 						</table>
+ 				</div>
 
-			<section class="accordion" aria-label="Additional product info">
-			  <details>
-					<summary>Sizing & Fit</summary>
-					<p>Olga is 175cm, she is wearing a size S.</p>
-				</details>
-        <details>
-					<summary>Composition & Care</summary>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-				</details>
-        <details>
-					<summary>Delivery & Returns</summary>
-				  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-				</details>
-			</section>
+  			<section aria-label="Prodcut description">
+  				<p>A unisex basic garment with a loose fit. Light and comfortable to your skin.</p>
+  				<p>Certification of cotton - GOTS</p>
+  			</section>
+      </div>
+
+      <div role="presentation" class="page-content__accordion">
+        <section class="accordion" aria-label="Additional product info">
+  			  <details id="details1">
+  					<summary>Sizing & Fit <span aria-hidden="true"></span></summary>
+  					<p>Olga is 175cm, she is wearing a size S.</p>
+  				</details>
+          <details id="details2">
+  					<summary>Composition & Care <span aria-hidden="true"></span></summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  				</details>
+          <details id="details3">
+  					<summary>Delivery & Returns <span aria-hidden="true"></span></summary>
+  					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </details>
+        </section>
+      </div>
 		</main>
 
 		<section class="container product-video" aria-labelledby="header-product-video">
@@ -172,10 +192,10 @@
 			</div>
 		</section>
 
-		<aside class="container ymal" aria-labelledby="aside-label">
+		<aside class="container ymal" role="presentation">
 			<h2 id="aside-label" class="heading-2 ymal__header">You may also like</h2>
 
-			<div class="ymal__list" role="list">
+			<div class="ymal__list" role="list" aria-labelledby="aside-label">
 				<div class="ymal__listitem" role="listitem">
   				<div class="ymal__imgWrapper">
   					<img class="ymal__img" src="images/photo2.jpg" srcset="images/photo2_x2.jpg 2x" alt="">
