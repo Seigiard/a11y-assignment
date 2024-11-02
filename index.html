@@ -5,387 +5,424 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>White unisex t-shirt - Susparsa</title>
 		<link rel="icon" href="icon.svg" type="image/svg+xml">
-		<link href="styles.css" rel="stylesheet">
+		<link href="styles.new.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="main-grid">
-			<header class="header">
-				<div class="container header__container">
-					<nav class="header__menu-main" aria-label="Primary navigation">
-						<ul class="menu">
-							<li class="menu__item">
-								<a class="menu__link" href="#">Women</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#">Men</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#">Kids</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#">Company</a>
-							</li>
-							<li>
-							  <a class="header__logo" href="/" aria-label="Susparsa main page" >
-									<img class="header__logo-picture" src="images/logo.svg" alt="Susparsa Logotype">
-								</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#">Account</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#">Search</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#">Cart (0)</a>
-							</li>
-						</ul>
-					</nav>
+		<header class="header">
+      <a class="skip-link" href="#main">
+        Skip to main content
+      </a>
+  		<nav class="container" aria-label="Primary navigation">
+  			<ul class="menu" role="menu">
+   				<li role="none" class="menu_logo menu_logo__mobile">
+            <label class="menu_toggle" id="menu_toggle" aria-label="Expand menu">
+              <input type="checkbox" class="sr-only" /> ☰
+            </label>
+   				  <a role="menuitem" href="/" aria-label="Susparsa main page" >
+   						<img src="images/logo.svg" alt="Susparsa Logotype">
+   					</a>
+   				</li>
+  				<li role="none">
+  					<a role="menuitem" href="#">Women</a>
+  				</li>
+  				<li role="none">
+  					<a role="menuitem" href="#">Men</a>
+  				</li>
+  				<li role="none">
+  					<a role="menuitem" href="#">Kids</a>
+  				</li>
+  				<li role="none">
+  					<a role="menuitem" href="#">Company</a>
+  				</li>
+  				<li role="none" class="menu_logo menu_logo__desktop">
+  				  <a role="menuitem" href="/" aria-label="Susparsa main page" >
+  						<img src="images/logo.svg" alt="Susparsa Logotype">
+   					</a>
+  				</li>
+  				<li role="none">
+  					<a role="menuitem" href="#">Account</a>
+  				</li>
+  				<li role="none">
+  					<a role="menuitem" href="#">Search</a>
+  				</li>
+  				<li role="none">
+  					<a role="menuitem" href="#">Cart (0)</a>
+  				</li>
+  			</ul>
+      </nav>
+		</header>
+
+		<section class="container">
+  		<nav aria-label="Breadcrumbs">
+   			<ol class="breadcrumbs">
+  				<li>
+   					<a href="#">Home</a>
+            <span aria-hidden="true">/</span>
+  				</li>
+  				<li>
+   					<a href="#">Women</a>
+            <span aria-hidden="true">/</span>
+  				</li>
+  				<li>
+   					<span><span class="sr-only">Active page</span> White unisex t-shirt</span>
+  				</li>
+   			</s>
+      </nav>
+		</section>
+
+		<main id="main" class="container page-content">
+  		<div role="presentation" class="page-content__image">
+  		  <img src="images/photo1.jpg" srcset="images/photo1_x2.jpg 2x" alt="">
+      </div>
+      <div role="presentation" class="page-content__content product">
+        <h1 id="productName" class="product__title">White unisex t-shirt</h1>
+
+  			<p class="product__price"><span class="sr-only">Price:</span> EUR 40</p>
+  			<p class="product__taxes">Tax included</p>
+
+  			<form
+          popovertarget="added-to-card-modal"
+          onsubmit="handleFromSubmitAndShowPopover(event)"
+          aria-label="Order form"
+          action="/make-order"
+          class="productForm"
+        >
+
+     			<label class="productForm_label" for="product-size">Size</label>
+     			<select class="select productForm_select" id="product-size" name="product_size">
+      				<option value="xs">XS</option>
+      				<option value="s">S</option>
+      				<option value="m">M</option>
+      				<option value="l">L</option>
+      				<option value="xl">XL</option>
+     			</select>
+
+  				<button
+            type="button"
+            popovertarget="size-guide-modal"
+            aria-label="Open Size Guide modal"
+            class="productForm_sizeGuideButton"
+          >Size Guide</button>
+
+  				<legend class="productForm_label" id="color-select-title">Color - White</legend>
+  				<fieldset id="color-select" class="productForm_color" role="radiogroup" aria-labelledby="color-select-title">
+         			<label style="background-color: white;">
+    						<input class="sr-only" type="radio" name="product_color" aria-label="White" value="white"
+                  data-sync-with="color-select-title" checked>
+     					</label>
+     					<label style="background-color: black;">
+    						<input
+                  class="sr-only"
+                  type="radio"
+                  name="product_color"
+                  aria-label="Black"
+                  value="black"
+                  data-sync-with="color-select-title">
+     					</label>
+     					<label style="background-color: gray;">
+    						<input class="sr-only" type="radio" name="product_color" aria-label="Gray" value="gray"
+                  data-sync-with="color-select-title">
+     					</label>
+     					<label style="background-color: purple;">
+    						<input class="sr-only" type="radio" name="product_color" aria-label="Purple latte" value="purple"
+                  data-sync-with="color-select-title">
+     					</label>
+     					<label>
+    						<input class="sr-only" type="radio" name="product_color" aria-label="Color 1" value="color1" disabled
+                  data-sync-with="color-select-title">
+    						<span class="sr-only">Color 1</span>
+     					</label>
+     					<label>
+    						<input class="sr-only" type="radio" name="product_color" aria-label="Color 2" value="color2" disabled
+                  data-sync-with="color-select-title">
+    						<span class="sr-only">Color 2</span>
+     					</label>
+  				</fieldset>
+
+  				<label class="productForm_label" for="productQuantity">Quantity
+            <span class="sr-only" aria-live="polite" aria-atomic="true" id="productQuantity_text">1 item</span>
+          </label>
+  				<fieldset class="productForm-quantity" aria-label="Quantity">
+  					<button type="button" class="productForm-quantity__btn" data-action="decrease" aria-label="Decrease quantity by 1">&minus;</button>
+  					<input
+              type="number"
+              class="productForm-quantity__field"
+              id="productQuantity"
+              data-sync-with="productQuantity_text"
+              name="product_quantity"
+              value="1">
+  					<button type="button" class="productForm-quantity__btn" data-action="increase" aria-label="Increase quantity by 1">&plus;</button>
+  				</fieldset>
+
+          <div role="presentation" class="productForm_actions">
+    				<button class="btn btn_secondary" type="submit">Add to cart</button>
+    				<button class="btn btn_primary" type="button" onclick="alert('Buy it now!')">Buy it now</button>
+          </div>
+  			</form>
+
+  			<section class="product_description" aria-label="Prodcut description">
+  				<p>A unisex basic garment with a loose fit. Light and comfortable to your skin.</p>
+  				<p>Certification of cotton - GOTS</p>
+  			</section>
+      </div>
+
+      <div role="presentation" class="page-content__accordion">
+        <section class="accordion" aria-label="Additional product info">
+  			  <details id="details1">
+  					<summary>Sizing & Fit <span aria-hidden="true"></span></summary>
+  					<p>Olga is 175cm, she is wearing a size S.</p>
+  				</details>
+          <details id="details2">
+  					<summary>Composition & Care <span aria-hidden="true"></span></summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  				</details>
+          <details id="details3">
+  					<summary>Delivery & Returns <span aria-hidden="true"></span></summary>
+  					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </details>
+        </section>
+      </div>
+		</main>
+
+		<section class="container product-video" aria-labelledby="header-product-video">
+			<h2 class="product-video__header" id="header-product-video">Video about the product</h2>
+			<div role="application" aria-labelledby="header-product-video">
+				<iframe width="100%" height="500" src="https://www.youtube.com/embed/9XDvpm7sLVg?si=clINFdoVQuk20KPS" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</section>
+
+		<aside class="container ymal" role="presentation">
+			<h2 id="aside-label" class="heading-2 ymal__header">You may also like</h2>
+
+			<div class="ymal__list" role="list" aria-labelledby="aside-label">
+				<div class="ymal__listitem" role="listitem">
+  				<div class="ymal__imgWrapper">
+  					<img class="ymal__img" src="images/photo2.jpg" srcset="images/photo2_x2.jpg 2x" alt="">
+  				</div>
+					<h3 class="ymal__subheader"><a href="#">Product name</a></h3>
+					<ul class="ymal__colors" aria-label="Avaliable colors">
+						<li class="ymal__color" style="background-color: orange;">
+							<span class="sr-only">
+							  Orange
+							</span>
+						</li>
+						<li class="ymal__color" style="background-color: pink;">
+							<span class="sr-only">
+							  Pink
+							</span>
+						</li>
+						<li class="ymal__color" style="background-color: blue;">
+							<span class="sr-only">
+							  Blue
+							</span>
+						</li>
+						<li class="ymal__color" style="background-color: green;">
+							<span class="sr-only">
+							  Green
+							</span>
+						</li>
+					</ul>
+					<p><span class="sr-only">Price:</span> EUR 40</p>
 				</div>
-			</header>
-
-			<div class="page-content">
-				<div class="container">
-					<nav aria-label="Breadcrumbs">
-						<ul class="breadcrumbs">
-							<li class="breadcrumbs__item">
-								<a class="breadcrumbs__link" href="#">Home</a>
-							</li>
-							<li class="breadcrumbs__item">
-								<a class="breadcrumbs__link" href="#">Women</a>
-							</li>
-							<li class="breadcrumbs__item breadcrumbs__item_active">
-								<span class="breadcrumbs__current">White unisex t-shirt</span>
-							</li>
-						</ul>
-					</nav>
-
-					<main class="product-card" id="skipLinkTarget">
-						<div class="product-card__right">
-							<h1 class="product-card__title" id="productName" aria-label="Product description">White unisex t-shirt</h1>
-							<p class="product-card__price" aria-label="Price">EUR 40</p>
-							<p class="product-card__infolabel" aria-label="Note:">Tax included</p>
-							<form class="product-card__form" action="#" aria-label="Order form">
-								<div class="product-card__parameter">
-									<div class="product-card__label" id="size-selector-label">Size</div>
-									<select class="product-size" aria-labelledby="size-selector-label">
-										<option value="xs">XS</option>
-										<option value="s">S</option>
-										<option value="m">M</option>
-										<option value="l">L</option>
-										<option value="xl">XL</option>
-									</select>
-									<button class="size-guide-link modal-target" aria-label="Open Size Guide modal">Size Guide</button>
-									<div class="modal">
-										<div class="modal-backdrop">
-											<div class="modal-body size-guide">
-												<h3 class="heading-2">Size guide</h3>
-												<p>Some description about the sizes</p>
-												<table class="size-guide__table">
-													<tr>
-														<td>EU</td>
-														<td>US</td>
-													</tr>
-													<tr>
-														<td>36</td>
-														<td>8</td>
-													</tr>
-													<tr>
-														<td>38</td>
-														<td>9</td>
-													</tr>
-													<tr>
-														<td>40</td>
-														<td>10</td>
-													</tr>
-													<tr>
-														<td>42</td>
-														<td>11</td>
-													</tr>
-												</table>
-											</div>
-										</div>
-									</div>
-								</div>
-								<fieldset class="product-card__parameter">
-									<legend class="product-card__label" id="color-selector-label">Color<span aria-hidden="true"> - <span id="productColorValue">White</span></span></legend>
-									<ul class="input-group" role="radiogroup" aria-labelledby="color-selector-label">
-										<li class="input-group__item">
-											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="White" value="white" checked hidden>
-												<span class="input-radio__visual input-radio-color">
-													<span class="input-radio-color__sample" style="background-color: #ffffff; border: 1px #cccccc solid;"></span>
-												</span>
-											</label>
-										</li>
-										<li class="input-group__item">
-											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Black" value="black" hidden>
-												<span class="input-radio__visual input-radio-color">
-													<span class="input-radio-color__sample" style="background-color: #1a1f29;"></span>
-												</span>
-											</label>
-										</li>
-										<li class="input-group__item">
-											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Gray" value="gray" hidden>
-												<span class="input-radio__visual input-radio-color">
-													<span class="input-radio-color__sample" style="background-color: #aeaeb0;"></span>
-												</span>
-											</label>
-										</li>
-										<li class="input-group__item">
-											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Purple latte" value="purple" hidden>
-												<span class="input-radio__visual input-radio-color">
-													<span class="input-radio-color__sample" style="background-color: #ba9be5;"></span>
-												</span>
-											</label>
-										</li>
-										<li class="input-group__item">
-											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Color 1" value="color1" disabled hidden>
-												<span class="input-radio__visual input-radio-color">
-													<span class="input-radio-color__sample" style="background-color: #e9a0a7;"></span>
-												</span>
-											</label>
-										</li>
-										<li class="input-group__item">
-											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Color 2" value="color2" disabled hidden>
-												<span class="input-radio__visual input-radio-color">
-													<span class="input-radio-color__sample" style="background-color: #f8cab1;"></span>
-												</span>
-											</label>
-										</li>
-									</ul>
-								</fieldset>
-								<div class="product-card__parameter product-card__parameter_last">
-									<span class="product-card__label" id="input-quantity-label">Quantity</span>
-									<div class="input-quantity">
-										<button class="input-quantity__btn" data-action="decrease" aria-label="Decrease quantity by 1">&minus;</button>
-										<input type="number" class="input-quantity__field" id="productQuantity" aria-labelledby="input-quantity-label" name="product_quantity" value="1">
-										<button class="input-quantity__btn" data-action="increase" aria-label="Increase quantity by 1">&plus;</button>
-									</div>
-								</div>
-								<button class="btn btn_secondary btn_hollow" type="button">Add to cart</button>
-								<button class="btn btn_primary" type="button">Buy it now</button>
-							</form>
-							<div class="product-card__description" aria-label="Prodcut description">
-								<p>A unisex basic garment with a loose fit. Light and comfortable to your skin.</p>
-								<p>Certification of cotton - GOTS</p>
-							</div>
-						</div>
-						<div class="product-card__left">
-							<div class="product-card__photo-big">
-								<img class="product-card__photo-big-picture" src="images/photo1.jpg" srcset="images/photo1_x2.jpg 2x" alt="">
-							</div>
-							<div class="accordion" role="contentinfo" aria-label="Additional product info">
-							  <details class="accordion__item">
-									<summary class="accordion__item-title">Sizing & Fit</summary>
-									<div class="accordion__item-body">
-									  <p>Olga is 175cm, she is wearing a size S.</p>
-									</div>
-								</details>
-				    <details class="accordion__item">
-  								<summary class="accordion__item-title">Composition & Care</summary>
-  								<div class="accordion__item-body">
-  								  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-  								</div>
-  							</details>
-                <details class="accordion__item">
-   								<summary class="accordion__item-title">Delivery & Returns</summary>
-   								<div class="accordion__item-body">
-   								  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-   								</div>
-   							</details>
-							</div>
-						</div>
-					</main>
-
-					<div class="section">
-						<h2 class="heading-2 products-similar__heading-2" id="header-product-video">Video about the product</h2>
-						<div class="product-video_container" role="application" aria-labelledby="header-product-video">
-							<iframe width="100%" height="500" src="https://www.youtube.com/embed/9XDvpm7sLVg?si=clINFdoVQuk20KPS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-						</div>
+				<div class="ymal__listitem" role="listitem">
+  				<div class="ymal__imgWrapper">
+  					<img class="ymal__img" src="images/photo3.jpg" srcset="images/photo3_x2.jpg 2x" alt="">
+  				</div>
+					<h3 class="ymal__subheader"><a href="#">Very long product name for testing purposes</a></h3>
+					<ul class="ymal__colors" aria-label="Avaliable colors">
+						<li class="ymal__color" style="background-color: red">
+							<span class="sr-only">
+							  Red
+							</span>
+						</li>
+						<li class="ymal__color" style="background-color: green;">
+							<span class="sr-only">
+							  Green
+							</span>
+						</li>
+						<li class="ymal__color" style="background-color: blue;">
+							<span class="sr-only">
+							  Blue
+							</span>
+						</li>
+					</ul>
+					<p><span class="sr-only">Price:</span> EUR 40</p>
+				</div>
+				<div class="ymal__listitem" role="listitem">
+					<div class="ymal__imgWrapper">
+					  <img class="ymal__img" src="images/photo4.jpg" srcset="images/photo4_x2.jpg 2x" alt="">
 					</div>
-
-					<aside class="section products-similar" aria-labelledby="aside-label">
-						<h3 class="heading-2 products-similar__heading-2" id="aside-label">You may also like</h3>
-						<div class="products-grid">
-							<div class="products-grid__item">
-								<a href="#" tabindex="-1" class="products-grid__item-photo" aria-hidden="true">
-									<img src="images/photo2.jpg" class="products-grid__item-picture" srcset="images/photo2_x2.jpg 2x" alt="">
-								</a>
-								<div class="products-grid__item-name"><a href="#">Product name</a></div>
-								<ul class="colors-palette products-grid__item-colors-palette" aria-label="Avaliable colors">
-									<li class="colors-palette__item" aria-label="orange">
-										<span class="colors-palette__sample" style="background-color: #C88252;">
-										</span>
-									</li>
-									<li class="colors-palette__item" aria-label="pink">
-										<span class="colors-palette__sample" style="background-color: #e04acc;">
-										</span>
-									</li>
-									<li class="colors-palette__item" aria-label="blue">
-										<span class="colors-palette__sample" style="background-color: #292fad;">
-										</span>
-									</li>
-									<li class="colors-palette__item" aria-label="green">
-										<span class="colors-palette__sample" style="background-color: #68da00;">
-										</span>
-									</li>
-								</ul>
-								<p class="products-grid__item-price">
-									EUR 40
-								</p>
-							</div>
-							<div class="products-grid__item">
-								<a href="#" tabindex="-1" class="products-grid__item-photo" aria-hidden="true">
-									<img src="images/photo3.jpg" class="products-grid__item-picture" srcset="images/photo3_x2.jpg 2x" alt="">
-								</a>
-								<div class="products-grid__item-name"><a href="#">Very long product name for testing purposes</a></div>
-								<ul class="colors-palette products-grid__item-colors-palette" aria-label="Avaliable colors">
-									<li class="colors-palette__item" aria-label="red">
-										<span class="colors-palette__sample" style="background-color: red;">
-										</span>
-									</li>
-									<li class="colors-palette__item" aria-label="green">
-										<span class="colors-palette__sample" style="background-color: green;">
-										</span>
-									</li>
-									<li class="colors-palette__item" aria-label="blue">
-										<span class="colors-palette__sample" style="background-color: blue;">
-										</span>
-									</li>
-								</ul>
-								<p class="products-grid__item-price">
-									EUR 40
-								</p>
-							</div>
-							<div class="products-grid__item">
-								<ul class="product-tags products-grid__item-product-tags">
-									<li class="product-tags__item">Sold out</li>
-								</ul>
-								<a href="#" tabindex="-1" class="products-grid__item-photo" aria-hidden="true">
-									<img src="images/photo4.jpg" class="products-grid__item-picture" srcset="images/photo4_x2.jpg 2x">
-								</a>
-								<div class="products-grid__item-name"><a href="#">Product name</a></div>
-								<ul class="colors-palette products-grid__item-colors-palette" aria-label="Avaliable colors">
-									<li class="colors-palette__item" aria-label="orange">
-										<span class="colors-palette__sample" style="background-color: #C88252;">
-										</span>
-									</li>
-									<li class="colors-palette__item" aria-label="pink">
-										<span class="colors-palette__sample" style="background-color: #e04acc;">
-										</span>
-									</li>
-									<li class="colors-palette__item" aria-label="blue">
-										<span class="colors-palette__sample" style="background-color: #292fad;">
-										</span>
-									</li>
-									<li class="colors-palette__item" aria-label="green">
-										<span class="colors-palette__sample" style="background-color: #68da00;">
-										</span>
-									</li>
-								</ul>
-								<p class="products-grid__item-price">
-									EUR 40
-								</p>
-							</div>
-
+					<h3 class="ymal__subheader"><a href="#">Product name</a></h3>
+					<div class="ymal__tag">
+							<span class="sr-only">Product status:</span> Sold out
 						</div>
-					</aside>
+					<ul class="ymal__colors" aria-label="Avaliable colors">
+						<li class="ymal__color" style="background-color: orange;">
+							<span class="sr-only">
+							  Orange
+							</span>
+						</li>
+						<li class="ymal__color" style="background-color: pink;">
+							<span class="sr-only">
+							  Pink
+							</span>
+						</li>
+						<li class="ymal__color" style="background-color: blue;">
+							<span class="sr-only">
+							  Blue
+							</span>
+						</li>
+						<li class="ymal__color" style="background-color: green;">
+							<span class="sr-only">
+							  Green
+							</span>
+						</li>
+					</ul>
+					<p><span class="sr-only">Price:</span> EUR 40</p>
 				</div>
 			</div>
+		</aside>
 
-			<footer class="footer">
-				<div class="container footer__container">
-					<div class="footer__columns">
-						<section class="footer__col">
-							<h4 class="footer__heading">About</h4>
-							<div class="footer__address">
-								<p>Susparsa Store</p>
-								<p>Geneva, Switzerland</p>
-								<ul class="social" aria-label="Our social accounts">
-									<li class="social__item">
-										<a class="social__link" href="#" target="_blank" aria-label="Facebook">
-											<svg class="social__logo" width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg" alt="">
-												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.02694 9.9817H6.42882V19.5H2.49245V9.9817H0.6203V6.63659H2.49245V4.47193C2.49245 2.92396 3.22776 0.5 6.46386 0.5L9.37967 0.512199V3.7592H7.26406C6.91704 3.7592 6.42908 3.93258 6.42908 4.671V6.63971H9.37084L9.02694 9.9817Z" fill="#5E626B"/>
-											</svg>
-										</a>
-									</li>
-									<li class="social__item">
-										<a class="social__link" href="#" target="_blank" aria-label="Instagram">
-											<svg class="social__logo" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M14.7071 0.5C17.3502 0.5 19.5 2.65013 19.5 5.29293V14.7071C19.5 17.3502 17.3502 19.5 14.7071 19.5H5.29293C2.65013 19.5 0.5 17.3502 0.5 14.7071V5.29293C0.5 2.65013 2.65013 0.5 5.29293 0.5H14.7071ZM14.7071 2.56779H5.29293C3.7903 2.56779 2.56779 3.7903 2.56779 5.29293V14.7071C2.56779 16.2097 3.7903 17.4326 5.29293 17.4326H14.7071C16.2097 17.4326 17.4326 16.21 17.4326 14.7071V5.29293C17.4326 3.7903 16.21 2.56779 14.7071 2.56779ZM10 5.10678C12.6984 5.10678 14.8936 7.30195 14.8936 10C14.8936 12.698 12.698 14.8936 10 14.8936C7.30195 14.8936 5.10678 12.6984 5.10678 10C5.10678 7.30195 7.30195 5.10678 10 5.10678ZM10 7.17456C8.44247 7.17456 7.17421 8.44212 7.17421 9.99965C7.17421 11.5579 8.44247 12.8258 10 12.8258C11.5582 12.8258 12.8254 11.5579 12.8254 9.99965C12.8254 8.44247 11.5579 7.17456 10 7.17456ZM15.0509 3.80297C15.6892 3.80297 16.2086 4.32238 16.2086 4.96073C16.2086 5.59909 15.6892 6.1185 15.0509 6.1185C14.4122 6.1185 13.8928 5.59909 13.8928 4.96073C13.8928 4.32238 14.4122 3.80297 15.0509 3.80297Z" fill="#5E626B" alt=""/>
-											</svg>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</section>
-						<section class="footer__col">
-							<h4 class="footer__heading">Company</h4>
-							<nav aria-label="Footer navigation">
-								<ul class="footer__list">
-									<li class="footer__list-item">
-										<a class="footer__list-link" href="#">Woman</a>
-									</li>
-									<li class="footer__list-item">
-										<a class="footer__list-link" href="#">Men</a>
-									</li>
-									<li class="footer__list-item">
-										<a class="footer__list-link" href="#">Kids</a>
-									</li>
-									<li class="footer__list-item">
-										<a class="footer__list-link" href="#">About Us</a>
-									</li>
-									<li class="footer__list-item">
-										<a class="footer__list-link" href="#">Our Materials</a>
-									</li>
-								</ul>
-							</nav>
-						</section>
-						<section class="footer__col">
-							<h4 class="footer__heading">Useful links</h4>
-							<div>
-								<ul class="footer__list">
-									<li class="footer__list-item">
-										<a class="footer__list-link" href="#">Privacy Policy</a>
-									</li>
-									<li class="footer__list-item">
-										<a class="footer__list-link" href="#">Shipping Policy</a>
-									</li>
-									<li class="footer__list-item">
-										<a class="footer__list-link" href="#">Return & Refund Policy</a>
-									</li>
-									<li class="footer__list-item">
-										<a class="footer__list-link" href="#">Terms of Service</a>
-									</li>
-									<li class="footer__list-item">
-										<a class="footer__list-link" href="#">Contact Us</a>
-									</li>
-								</ul>
-							</div>
-						</section>
-						<section class="footer__col">
-							<h4 class="footer__heading" id="header-subscription-form">Subscribe</h4>
-							<form class="form" action="/request-form" aria-labelledby="header-subscription-form">
-								<div class="form__input-group">
-  								<input class="input" type="email" name="email" id="email" placeholder="Email" aria-label="Email input">
-  								<button type='submit' class="btn btn_primary">Subscribe</button>
-								</div>
-								<label class="form__input-group">
-									<input class="checkbox" type="checkbox" name="agree" id="agree"> I agree to give you all my data
-								</label>
-							</form>
-						</section>
-					</div>
-					<small class="footer__copyright">© Susparsa 2021</small>
-				</div>
-			</footer>
+		<footer class="footer" aria-labelledby="footer-title">
+			<h2 class="sr-only" id="footer-title">Footer</h2>
+			<div class="container footer-container" role="presentation">
+  			<section class="footer_about">
+  				<h3>About</h3>
+
+          <address>
+            <p>Susparsa Store</p>
+            <p>Geneva,<br> Switzerland</p>
+          </address>
+
+  				<ul role="menu" class="social" aria-label="Our social accounts">
+  					<li role="none">
+  						<a role="menuitem" href="#" target="_blank">
+  							<svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Facebook icon" aria-label="Facebook, opens in new window">
+  								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.02694 9.9817H6.42882V19.5H2.49245V9.9817H0.6203V6.63659H2.49245V4.47193C2.49245 2.92396 3.22776 0.5 6.46386 0.5L9.37967 0.512199V3.7592H7.26406C6.91704 3.7592 6.42908 3.93258 6.42908 4.671V6.63971H9.37084L9.02694 9.9817Z" fill="#5E626B"/>
+  							</svg>
+  						</a>
+  					</li>
+  					<li role="none">
+  						<a role="menuitem" href="#" target="_blank">
+  							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Instagram icon" aria-label="Instagram, opens in new window">
+  								<path d="M14.7071 0.5C17.3502 0.5 19.5 2.65013 19.5 5.29293V14.7071C19.5 17.3502 17.3502 19.5 14.7071 19.5H5.29293C2.65013 19.5 0.5 17.3502 0.5 14.7071V5.29293C0.5 2.65013 2.65013 0.5 5.29293 0.5H14.7071ZM14.7071 2.56779H5.29293C3.7903 2.56779 2.56779 3.7903 2.56779 5.29293V14.7071C2.56779 16.2097 3.7903 17.4326 5.29293 17.4326H14.7071C16.2097 17.4326 17.4326 16.21 17.4326 14.7071V5.29293C17.4326 3.7903 16.21 2.56779 14.7071 2.56779ZM10 5.10678C12.6984 5.10678 14.8936 7.30195 14.8936 10C14.8936 12.698 12.698 14.8936 10 14.8936C7.30195 14.8936 5.10678 12.6984 5.10678 10C5.10678 7.30195 7.30195 5.10678 10 5.10678ZM10 7.17456C8.44247 7.17456 7.17421 8.44212 7.17421 9.99965C7.17421 11.5579 8.44247 12.8258 10 12.8258C11.5582 12.8258 12.8254 11.5579 12.8254 9.99965C12.8254 8.44247 11.5579 7.17456 10 7.17456ZM15.0509 3.80297C15.6892 3.80297 16.2086 4.32238 16.2086 4.96073C16.2086 5.59909 15.6892 6.1185 15.0509 6.1185C14.4122 6.1185 13.8928 5.59909 13.8928 4.96073C13.8928 4.32238 14.4122 3.80297 15.0509 3.80297Z" fill="#5E626B"/>
+  							</svg>
+  						</a>
+  					</li>
+  				</ul>
+  			</section>
+
+  			<section class="footer_company">
+  				<h3 id="footer_company_title">Company</h3>
+  				<nav aria-labelledby="footer_company_title">
+  					<ul role="menu">
+  						<li role="none">
+  							<a role="menuitem" href="#">Woman</a>
+  						</li>
+  						<li role="none">
+  							<a role="menuitem" href="#">Men</a>
+  						</li>
+  						<li role="none">
+  							<a role="menuitem" href="#">Kids</a>
+  						</li>
+  						<li role="none">
+  							<a role="menuitem" href="#">About Us</a>
+  						</li>
+  						<li role="none">
+  							<a role="menuitem" href="#">Our Materials</a>
+  						</li>
+  					</ul>
+  				</nav>
+  			</section>
+
+  			<section class="footer_useful">
+  				<h3 id="footer_useful_title">Useful links</h3>
+  				<nav aria-labelledby="footer_useful_title">
+  					<ul role="menu">
+  						<li role="none">
+  							<a role="menuitem" href="#">Privacy Policy</a>
+  						</li>
+  						<li role="none">
+  							<a role="menuitem" href="#">Shipping Policy</a>
+  						</li>
+  						<li role="none">
+  							<a role="menuitem" href="#">Return & Refund Policy</a>
+  						</li>
+  						<li role="none">
+  							<a role="menuitem" href="#">Terms of Service</a>
+  						</li>
+  						<li role="none">
+  							<a role="menuitem" href="#">Contact Us</a>
+  						</li>
+  					</ul>
+  				</nav>
+  			</section>
+
+  			<form class="footer_subscribe" popovertarget="subscribed-modal" onSubmit="handleFromSubmitAndShowPopover(event)" aria-labelledby="subscription-form-title" action="/subscribe-form">
+   			  <h3 id="subscription-form-title" aria-label="Subscribe Form">Subscribe</h3>
+          <div class="subscription_form" role="presentation">
+    				<label class="subscription_form__input">
+      				<span class="sr-only">Your Email:</span>
+      				<input class="input w-full" type="email" name="email" id="email" placeholder="Email" required>
+    				</label>
+
+    				<label class="subscription_form__checkbox">
+     					<input class="checkbox" type="checkbox" name="agree" id="agree" required> I agree to give you all my data
+    				</label>
+
+    				<div class="subscription_form__button">
+              <button class="btn btn_primary" type='submit'>Subscribe</button>
+            </div>
+          </div>
+  			</form>
+			</div>
+			<p class="container footer_copyright">© Susparsa 2021</p>
+		</footer>
+
+		<div
+		  popover
+			id="size-guide-modal"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="size-guide-modal-title"
+		>
+		  <button class="btn btn_secondary" popovertarget="size-guide-modal" aria-label="Close Size guide table modal">×</button>
+			<h3 id="size-guide-modal-title">Size guide</h3>
+			<p>Some description about the sizes</p>
+			<table class="size-guide__table" aria-label="Size guide table">
+  			<tr>
+  				<td>EU</td>
+  				<td>US</td>
+  			</tr>
+  			<tr>
+  				<td>36</td>
+  				<td>8</td>
+  			</tr>
+  			<tr>
+  				<td>38</td>
+  				<td>9</td>
+  			</tr>
+  			<tr>
+  				<td>40</td>
+  				<td>10</td>
+  			</tr>
+  			<tr>
+  				<td>42</td>
+  				<td>11</td>
+  			</tr>
+  		</table>
+  	</div>
+
+		<div popover id="added-to-card-modal">
+      <button class="btn btn_secondary" popovertarget="added-to-card-modal" aria-label="Close Added to card modal">×</button>
+		  <h2>Added to card</h2>
 		</div>
-		<script src="scripts.js"></script>
+
+    <div popover id="subscribed-modal">
+      <button class="btn btn_secondary" popovertarget="subscribed-modal" aria-label="Close Subscribed modal">×</button>
+      <h2>Succesfully subscribed!</h2>
+    </div>
+
+		<script src="scripts.new.js"></script>
 	</body>
 </html>
