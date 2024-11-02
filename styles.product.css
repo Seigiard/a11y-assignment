@@ -74,6 +74,7 @@
 
 .productForm_color {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .productForm_color label {
