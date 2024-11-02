@@ -37,11 +37,6 @@
 
 a {
   text-decoration: none;
-  outline: none;
-}
-a:focus {
-  outline: 1px dashed;
-  outline-offset: 2px;
 }
 
 p {
@@ -93,10 +88,6 @@ button {
 
 button {
   cursor: pointer;
-}
-button:focus {
-  outline: 1px dashed;
-  outline-offset: 2px;
 }
 
 address {
@@ -576,7 +567,6 @@ fieldset legend {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
-  outline: none;
 }
 
 .product-card__left {
@@ -810,7 +800,6 @@ fieldset legend {
 }
 
 .input-quantity__btn:hover {
-  outline: 1px var(--border-color-primary) solid;
   z-index: 1;
   color: var(--text-color-primary);
 }

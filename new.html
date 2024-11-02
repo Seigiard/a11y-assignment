@@ -53,18 +53,20 @@
 		</header>
 
 		<section class="container">
-  		<nav aria-label="Breadcrumb">
+  		<nav aria-label="Breadcrumbs">
    			<ol class="breadcrumbs">
   				<li>
    					<a href="#">Home</a>
+            <span aria-hidden="true">/</span>
   				</li>
   				<li>
    					<a href="#">Women</a>
+            <span aria-hidden="true">/</span>
   				</li>
   				<li>
-   					<span>White unisex t-shirt</span>
+   					<span><span class="sr-only">Active page</span> White unisex t-shirt</span>
   				</li>
-   			</>
+   			</s>
       </nav>
 		</section>
 
@@ -78,9 +80,16 @@
   			<p class="product__price"><span class="sr-only">Price:</span> EUR 40</p>
   			<p class="product__taxes">Tax included</p>
 
-  			<form popovertarget="added-to-card-modal" onsubmit="handleFromSubmitAndShowPopover(event)" aria-label="Order form" action="/make-order">
-     			<label for="product-size">Size</label>
-     			<select id="product-size" name="product_size">
+  			<form
+          popovertarget="added-to-card-modal"
+          onsubmit="handleFromSubmitAndShowPopover(event)"
+          aria-label="Order form"
+          action="/make-order"
+          class="productForm"
+        >
+
+     			<label class="productForm_label" for="product-size">Size</label>
+     			<select class="select productForm_select" id="product-size" name="product_size">
       				<option value="xs">XS</option>
       				<option value="s">S</option>
       				<option value="m">M</option>
@@ -88,80 +97,70 @@
       				<option value="xl">XL</option>
      			</select>
 
-  				<button type="button" popovertarget="size-guide-modal" aria-label="Open Size Guide modal">Size Guide</button>
+  				<button
+            type="button"
+            popovertarget="size-guide-modal"
+            aria-label="Open Size Guide modal"
+            class="productForm_sizeGuideButton"
+          >Size Guide</button>
 
-
-  				<fieldset role="radiogroup" aria-labelledby="color-select-title">
-  					<legend id="color-select-title">Color</legend>
-  					<label>
-  						<input type="radio" name="product_color" value="white" checked>
-  						White
-  					</label>
-  					<label>
-  						<input type="radio" name="product_color" value="black">
-  						Black
-  					</label>
-  					<label>
-  						<input type="radio" name="product_color" data-name-display="Gray" value="gray">
-  						Gray
-  					</label>
-  					<label>
-  						<input type="radio" name="product_color" data-name-display="Purple latte" value="purple">
-  						Purple
-  					</label>
-  					<label>
-  						<input type="radio" name="product_color" data-name-display="Color 1" value="color1" disabled>
-  						Color 1
-  					</label>
-  					<label>
-  						<input type="radio" name="product_color" data-name-display="Color 2" value="color2" disabled>
-  						Color 2
-  					</label>
+  				<legend class="productForm_label" id="color-select-title">Color - White</legend>
+  				<fieldset id="color-select" class="productForm_color" role="radiogroup" aria-labelledby="color-select-title">
+         			<label style="background-color: white;">
+    						<input class="sr-only" type="radio" name="product_color" aria-label="White" value="white"
+                  data-sync-with="color-select-title" checked>
+     					</label>
+     					<label style="background-color: black;">
+    						<input
+                  class="sr-only"
+                  type="radio"
+                  name="product_color"
+                  aria-label="Black"
+                  value="black"
+                  data-sync-with="color-select-title">
+     					</label>
+     					<label style="background-color: gray;">
+    						<input class="sr-only" type="radio" name="product_color" aria-label="Gray" value="gray"
+                  data-sync-with="color-select-title">
+     					</label>
+     					<label style="background-color: purple;">
+    						<input class="sr-only" type="radio" name="product_color" aria-label="Purple latte" value="purple"
+                  data-sync-with="color-select-title">
+     					</label>
+     					<label>
+    						<input class="sr-only" type="radio" name="product_color" aria-label="Color 1" value="color1" disabled
+                  data-sync-with="color-select-title">
+    						<span class="sr-only">Color 1</span>
+     					</label>
+     					<label>
+    						<input class="sr-only" type="radio" name="product_color" aria-label="Color 2" value="color2" disabled
+                  data-sync-with="color-select-title">
+    						<span class="sr-only">Color 2</span>
+     					</label>
   				</fieldset>
 
-  				<label for="productQuantity">Quantity</label>
-  				<fieldset class="input-quantity" aria-label="Quantity">
-  					<button type="button" class="input-quantity__btn" data-action="decrease" aria-label="Decrease quantity by 1">&minus;</button>
-  					<input type="number" class="input-quantity__field" id="productQuantity" name="product_quantity" value="1">
-  					<button type="button" class="input-quantity__btn" data-action="increase" aria-label="Increase quantity by 1">&plus;</button>
+  				<label class="productForm_label" for="productQuantity">Quantity
+            <span class="sr-only" aria-live="polite" aria-atomic="true" id="productQuantity_text">1 item</span>
+          </label>
+  				<fieldset class="productForm-quantity" aria-label="Quantity">
+  					<button type="button" class="productForm-quantity__btn" data-action="decrease" aria-label="Decrease quantity by 1">&minus;</button>
+  					<input
+              type="number"
+              class="productForm-quantity__field"
+              id="productQuantity"
+              data-sync-with="productQuantity_text"
+              name="product_quantity"
+              value="1">
+  					<button type="button" class="productForm-quantity__btn" data-action="increase" aria-label="Increase quantity by 1">&plus;</button>
   				</fieldset>
 
-  				<button type="submit">Add to cart</button>
-  				<button type="button" onclick="alert('Buy it now!')">Buy it now</button>
+          <div role="presentation" class="productForm_actions">
+    				<button class="btn btn_secondary" type="submit">Add to cart</button>
+    				<button class="btn btn_primary" type="button" onclick="alert('Buy it now!')">Buy it now</button>
+          </div>
   			</form>
 
-  			<div popover id="added-to-card-modal">
-  			 <h2>Added to card</h2>
-  			</div>
-
- 				<div popover id="size-guide-modal">
- 						<h3 class="heading-2">Size guide</h3>
- 						<p>Some description about the sizes</p>
- 						<table class="size-guide__table" aria-label="Size guide table">
- 							<tr>
- 								<td>EU</td>
- 								<td>US</td>
- 							</tr>
- 							<tr>
- 								<td>36</td>
- 								<td>8</td>
- 							</tr>
- 							<tr>
- 								<td>38</td>
- 								<td>9</td>
- 							</tr>
- 							<tr>
- 								<td>40</td>
- 								<td>10</td>
- 							</tr>
- 							<tr>
- 								<td>42</td>
- 								<td>11</td>
- 							</tr>
- 						</table>
- 				</div>
-
-  			<section aria-label="Prodcut description">
+  			<section class="product_description" aria-label="Prodcut description">
   				<p>A unisex basic garment with a loose fit. Light and comfortable to your skin.</p>
   				<p>Certification of cotton - GOTS</p>
   			</section>
@@ -186,7 +185,7 @@
 		</main>
 
 		<section class="container product-video" aria-labelledby="header-product-video">
-			<h2 class="heading-2 product-video__header" id="header-product-video">Video about the product</h2>
+			<h2 class="product-video__header" id="header-product-video">Video about the product</h2>
 			<div role="application" aria-labelledby="header-product-video">
 				<iframe width="100%" height="500" src="https://www.youtube.com/embed/9XDvpm7sLVg?si=clINFdoVQuk20KPS" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</div>
@@ -339,28 +338,28 @@
   			<section class="footer_useful">
   				<h3 id="footer_useful_title">Useful links</h3>
   				<nav aria-labelledby="footer_useful_title">
-  					<ul>
-  						<li>
-  							<a href="#">Privacy Policy</a>
+  					<ul role="menu">
+  						<li role="none">
+  							<a role="menuitem" href="#">Privacy Policy</a>
   						</li>
-  						<li>
-  							<a href="#">Shipping Policy</a>
+  						<li role="none">
+  							<a role="menuitem" href="#">Shipping Policy</a>
   						</li>
-  						<li>
-  							<a href="#">Return & Refund Policy</a>
+  						<li role="none">
+  							<a role="menuitem" href="#">Return & Refund Policy</a>
   						</li>
-  						<li>
-  							<a href="#">Terms of Service</a>
+  						<li role="none">
+  							<a role="menuitem" href="#">Terms of Service</a>
   						</li>
-  						<li>
-  							<a href="#">Contact Us</a>
+  						<li role="none">
+  							<a role="menuitem" href="#">Contact Us</a>
   						</li>
   					</ul>
   				</nav>
   			</section>
 
   			<form class="footer_subscribe" popovertarget="subscribed-modal" onSubmit="handleFromSubmitAndShowPopover(event)" aria-labelledby="subscription-form-title" action="/subscribe-form">
-   			  <h3 id="subscription-form-title">Subscribe</h3>
+   			  <h3 id="subscription-form-title" aria-label="Subscribe Form">Subscribe</h3>
           <div class="subscription_form" role="presentation">
     				<label class="subscription_form__input">
       				<span class="sr-only">Email:</span>
@@ -376,12 +375,54 @@
             </div>
           </div>
   			</form>
-  			<div popover id="subscribed-modal">
-  			  <h2>Succesfully subscribed!</h2>
-  			</div>
 			</div>
 			<p class="container footer_copyright">© Susparsa 2021</p>
 		</footer>
+
+		<div
+		  popover
+			id="size-guide-modal"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="size-guide-modal-title"
+		>
+		  <button class="btn btn_secondary" popovertarget="size-guide-modal" aria-label="Close Size guide table modal">×</button>
+			<h3 id="size-guide-modal-title">Size guide</h3>
+			<p>Some description about the sizes</p>
+			<table class="size-guide__table" aria-label="Size guide table">
+  			<tr>
+  				<td>EU</td>
+  				<td>US</td>
+  			</tr>
+  			<tr>
+  				<td>36</td>
+  				<td>8</td>
+  			</tr>
+  			<tr>
+  				<td>38</td>
+  				<td>9</td>
+  			</tr>
+  			<tr>
+  				<td>40</td>
+  				<td>10</td>
+  			</tr>
+  			<tr>
+  				<td>42</td>
+  				<td>11</td>
+  			</tr>
+  		</table>
+  	</div>
+
+		<div popover id="added-to-card-modal">
+      <button class="btn btn_secondary" popovertarget="added-to-card-modal" aria-label="Close Added to card modal">×</button>
+		  <h2>Added to card</h2>
+		</div>
+
+    <div popover id="subscribed-modal">
+      <button class="btn btn_secondary" popovertarget="subscribed-modal" aria-label="Close Subscribed modal">×</button>
+      <h2>Succesfully subscribed!</h2>
+    </div>
+
 		<script src="scripts.new.js"></script>
 	</body>
 </html>

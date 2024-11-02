@@ -23,8 +23,8 @@
   align-content: center;
   gap: 1rem;
 }
-.menu_logo:focus-visible img {
-  outline: 1px dashed;
+.menu_logo:focus-within img {
+  outline: 2px solid var(--brand-blue);
   outline-offset: 2px;
 }
 .menu_logo img {

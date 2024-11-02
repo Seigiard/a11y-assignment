@@ -54,7 +54,6 @@
 @layer default {
   a {
     text-decoration: none;
-    outline: none;
   }
 
   a:hover {
@@ -62,7 +61,6 @@
   }
 
   a:focus {
-    outline: 1px dashed;
     outline-offset: 2px;
   }
 
@@ -95,18 +93,18 @@
 
   input,
   textarea,
+  select,
   button {
     font-family: "Avenir Next Rounded Std", sans-serif;
     border: none;
     background: none;
-    outline: none;
   }
-
   button {
     cursor: pointer;
   }
-  button:focus {
-    outline: 1px dashed;
+
+  *:focus-visible {
+    outline: 2px solid var(--brand-blue);
     outline-offset: 2px;
   }
 
