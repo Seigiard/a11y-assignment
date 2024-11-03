@@ -53,21 +53,19 @@
 		</header>
 
 		<section class="container">
-  		<nav aria-label="Breadcrumbs">
-   			<ol class="breadcrumbs">
-  				<li>
-   					<a href="#">Home</a>
-            <span aria-hidden="true">/</span>
-  				</li>
-  				<li>
-   					<a href="#">Women</a>
-            <span aria-hidden="true">/</span>
-  				</li>
-  				<li>
-   					<span><span class="sr-only">Active page</span> White unisex t-shirt</span>
-  				</li>
-   			</s>
-      </nav>
+ 			<ol aria-label="Breadcrumbs" class="breadcrumbs">
+				<li>
+ 					<a href="#">Home</a>
+          <span aria-hidden="true">/</span>
+				</li>
+				<li>
+ 					<a href="#">Women</a>
+          <span aria-hidden="true">/</span>
+				</li>
+				<li>
+ 					<span><span class="sr-only">Active page</span> White unisex t-shirt</span>
+				</li>
+ 			</ol>
 		</section>
 
 		<main id="main" class="container page-content">
@@ -104,7 +102,7 @@
             class="productForm_sizeGuideButton"
           >Size Guide</button>
 
-  				<legend class="productForm_label" id="color-select-title">Color - White</legend>
+  				<legend class="productForm_label" id="color-select-title" aria-live="polite">Color - White</legend>
   				<fieldset id="color-select" class="productForm_color" role="radiogroup" aria-labelledby="color-select-title">
          			<label style="background-color: white;">
     						<input class="sr-only" type="radio" name="product_color" aria-label="White" value="white"
@@ -150,6 +148,7 @@
               id="productQuantity"
               data-sync-with="productQuantity_text"
               name="product_quantity"
+              min="1"
               value="1">
   					<button type="button" class="productForm-quantity__btn" data-action="increase" aria-label="Increase quantity by 1">&plus;</button>
   				</fieldset>
@@ -191,16 +190,16 @@
 			</div>
 		</section>
 
-		<aside class="container ymal" role="presentation">
+		<aside class="container ymal" aria-labelledby="aside-label">
 			<h2 id="aside-label" class="heading-2 ymal__header">You may also like</h2>
 
-			<div class="ymal__list" role="list" aria-labelledby="aside-label">
+			<div class="ymal__list" role="list" aria-label="Three products you may like">
 				<div class="ymal__listitem" role="listitem">
   				<div class="ymal__imgWrapper">
   					<img class="ymal__img" src="images/photo2.jpg" srcset="images/photo2_x2.jpg 2x" alt="">
   				</div>
 					<h3 class="ymal__subheader"><a href="#">Product name</a></h3>
-					<ul class="ymal__colors" aria-label="Avaliable colors">
+					<ul class="ymal__colors" aria-label="Products name avaliable colors">
 						<li class="ymal__color" style="background-color: orange;">
 							<span class="sr-only">
 							  Orange
@@ -229,7 +228,7 @@
   					<img class="ymal__img" src="images/photo3.jpg" srcset="images/photo3_x2.jpg 2x" alt="">
   				</div>
 					<h3 class="ymal__subheader"><a href="#">Very long product name for testing purposes</a></h3>
-					<ul class="ymal__colors" aria-label="Avaliable colors">
+					<ul class="ymal__colors" aria-label="Very long product name for testing purposes avaliable colors">
 						<li class="ymal__color" style="background-color: red">
 							<span class="sr-only">
 							  Red
@@ -256,7 +255,7 @@
 					<div class="ymal__tag">
 							<span class="sr-only">Product status:</span> Sold out
 						</div>
-					<ul class="ymal__colors" aria-label="Avaliable colors">
+					<ul class="ymal__colors" aria-label="Producs name avaliable colors">
 						<li class="ymal__color" style="background-color: orange;">
 							<span class="sr-only">
 							  Orange
